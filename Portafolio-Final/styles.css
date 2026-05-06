@@ -1,0 +1,114 @@
+:root{
+    --color-primary: #f05416;
+    --color-secondary: #000000;
+}
+
+.header,
+.sidebar,
+.content,
+.skills{
+  padding: 20px;
+  color: white;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--color-primary);
+    min-height: 100vh;
+    font-family: "Geologica", sans-serif;
+}
+
+.grid-areas{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "sidebar content"
+    "skills skills";
+    grid-template-columns: 30vw 1fr;
+}
+
+.header{
+    display: grid;
+    grid-area: header;
+    background: var(--color-secondary);
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: linear-gradient(to left,#000000,#f05416);
+    min-height: 50vh;
+    min-width: 100vw;
+    background: linear-gradient(to right,#f05416,#000000);
+}
+
+.content{
+    grid-area: content;
+    background: var(--color-secondary);
+    margin-left: 5px;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),  /* overlay oscuro */
+        url(/assets/Fondo1.avif);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+}
+
+.skills{
+    grid-area: skills;
+    background: var(--color-secondary);
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo-imagen{
+    display: flex;
+    width: 10vw;
+    height: 7vh;
+    background-color: red;
+    margin: 0 auto;
+    margin-left: 9vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-image: url(/assets/logiño.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    min-width: 100%;
+    justify-content: center;
+    font-size: 1.3rem;
+    background: linear-gradient(to bottom right, #f09816,#f05416);
+    border-radius: 16px;
+    
+}
+
+.item:hover{
+    background: black;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    box-shadow: 2px 4px var(--color-primary);
+    font-weight: bold;
+}
+
+
+
+
